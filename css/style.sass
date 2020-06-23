@@ -1,0 +1,2258 @@
+$bg1: #f5f5f5
+$bg_menu: linear-gradient(220deg,#da4735 0,#212347 100%)
+
+*
+  --main-font: -apple-system,BlinkMacSystemFont,Tahoma,Geneva,Open Sans,Helvetica Neue,"Noto Sans Armenian","Noto Sans Bengali","Noto Sans Cherokee","Noto Sans Devanagari","Noto Sans Ethiopic","Noto Sans Georgian","Noto Sans Hebrew","Noto Sans Kannada","Noto Sans Khmer","Noto Sans Lao","Noto Sans Osmanya","Noto Sans Tamil","Noto Sans Telugu","Noto Sans Thai",sans-serif
+
+  --h-font: -apple-system,BlinkMacSystemFont,Roboto,Open Sans,Helvetica Neue,sans-serif
+
+  --responsive: calc((var(--min-font) * 1px) + (var(--max-font) - var(--min-font)) * ((100vw - 420px) / (1200 - 420)))
+
+@media (min-width: 1200px)
+  h1,h2,h3,h4,h5,p,body
+    font-size: calc(var(--max-font) * 1px)!important
+
+@media (max-width: 420px)
+  h1,h2,h3,h4,h5,p,body
+    font-size: calc(var(--min-font) * 1px)!important
+
+
+body
+  margin: 0
+  padding: 0
+  font-family: var(--main-font)
+  font-size: var(--responsive)
+  --max-font: 18
+  --min-font: 14
+  font-weight: normal
+  line-height: 1.5
+  background: #FBF9F5
+
+h1,h2,h3,h4,h5,.h1,.h2,.h3,.h4,.h5
+  font-family: var(--h-font)
+  font-size: var(--responsive)
+  font-weight: 500
+  line-height: normal
+  color: #212347
+
+h1,.h1
+  --max-font: 50
+  --min-font: 34
+
+
+h2,.h2
+  --max-font: 40
+  --min-font: 28
+
+h3,.h3
+  --max-font: 30
+  --min-font: 22
+
+h4,.h4
+  --max-font: 22
+  --min-font: 19
+
+h5,.h5
+  --max-font: 18
+  --min-font: 17
+
+input:focus, textarea:focus, keygen:focus, select:focus
+  outline-offset: 0
+
+strong, b
+  font-weight: bold
+figure
+  margin: 1em auto
+img
+  max-width: 100%
+  &.logo
+    width: 100%
+    height: auto
+    max-width: 240px!important
+
+a
+  color: #0739c0
+  text-decoration: none
+  cursor: pointer
+  &:link
+    color: blue
+  &:visited
+    color: green
+  &:hover
+    text-decoration: underline
+  &:active
+    color: red
+  &:focus
+    outline: none
+
+a
+  &.facebook
+    color: #3b5999
+  &.vkontakte
+    color: #4c75a3
+  &.twitter
+    color: #55acee
+  &.instagram
+    color: #bc2a8d
+  &.youtube
+    color: #cd201f
+
+a.download_link
+  text-decoration: none
+  position: relative
+  font-size: 1em
+  margin-left: 1.35em
+  display: block
+  &::before
+    content: ''
+    background: url(../img/icon/i_download.svg) no-repeat
+    background-size: 1.25em
+    position: absolute
+    left: -1.65em
+    top: 0.125em
+    width: 1.25em
+    height: 1.25em
+    display: inline-block
+
+  &:hover
+    text-decoration: underline
+
+  &:hover
+    text-decoration: underline
+
+
+blockquote
+  margin: 1em
+  max-width: 550px
+  position: relative
+  padding: 2em 1em 2em 3.5em
+  background-color: #c5c5c530
+  color: #000
+  font-weight: 500
+  border-radius: 0.25em
+
+  &::before
+    content: '\201e'
+    position: absolute
+    top: -0.25em
+    left: 0.35em
+    font-family: Georgia, serif
+    font-size: 3em
+    line-height: normal
+    font-weight: 600
+    opacity: 0.5
+
+  &::after
+    content: ' '
+
+
+blockquote.pass
+  font-style: italic
+  font-family: serif
+  margin: 2em 0.5em
+  padding: 1.5em
+  letter-spacing: 0.05em
+  background: #fafafa
+  box-shadow: 0 0 10px rgba(0,0,0,0.3), 0 0 300px 25px rgba(222,198,122,0.7) inset
+  width: 80%
+  max-width: 480px
+  small
+    display: block
+    font-weight: 500
+    margin: 10px 0
+    &::before
+      content: "—"
+      margin: 0 5px 0 0
+
+
+picture
+  display: block
+  width: 100%
+video
+  max-width: 100%
+  height: auto
+  margin: 1em auto
+  border-radius: 0.25em
+
+button
+  cursor: pointer
+  outline-color: transparent
+  &:focus
+    outline: 0
+
+svg.iconify
+  position: relative
+  top: 2px
+
+.file_attach_section
+  padding: 1em 0 2em
+  ol.fil
+    margin: 1em 0 2em 0
+    padding: 0 0 0 1.5em
+    li
+      margin: 0.5em 0
+      a
+        display: inline-block
+        position: relative
+        &:hover
+          text-decoration: none
+          color: red
+          &::after
+            background: url(../img/icon/i_download_hover.svg) no-repeat center
+
+        &::after
+          content: ''
+          background: url(../img/icon/i_download.svg) no-repeat center
+          position: absolute
+          top: 0
+          bottom: 0
+          width: 2em
+
+        .icontypefile
+          display: inline-block
+          fill: currentColor
+          width: 2em
+          vertical-align: bottom
+        .icon
+          width: 24px
+          height: 24px
+          fill: currentColor
+
+
+
+
+
+.content
+  ul, ol
+    list-style: none
+  ul
+    margin: 1em
+    padding: 0 0 0 1.5em
+    li
+      position: relative
+      margin: 1em 0
+      &:before
+        content: url(../img/icon/i_check.svg)
+        vertical-align: middle
+        display: inline-block
+        position: absolute
+        left: -1.5em
+        line-height: 1.5
+  ol
+    counter-reset: num
+    li
+      counter-increment: num
+      position: relative
+      margin: 1em 0
+      &:before
+        position: absolute
+        display: inline-block
+        left: -1.5em
+        color: initial
+        line-height: inherit
+        content: counter(num) "."
+    ol
+      counter-reset: num2
+      &>li
+        counter-increment: num2
+        &:before
+          left: -2em
+          content: counter(num) "." counter(num2)
+      ol
+        counter-reset: num3
+        &>li
+          counter-increment: num3
+          &:before
+            left: -2em
+            content: counter(num) "." counter(num2) "." counter(num3)
+  img
+    border-radius: 5px
+    max-width: 100%
+  p
+    margin: 1.5em 0
+    //&:first-child
+      font-size: 110%
+      &:first-letter
+        font-size: 200%
+        color: #00535e
+
+  figure
+    margin: 1em auto
+    padding: 0
+    figcaption
+      margin-top: 0.5em
+      font-size: var(--responsive)
+      --max-font: 15
+      --min-font: 13
+      font-weight: bold
+  figure:nth-child(1)
+    figcaption
+      display: none
+
+.btn_more
+  outline: none
+  font-family: var(--main-font)
+  font-size: 1em
+  padding: 0.5em 2em 0.5em 1.5em
+  border: 1px solid rgba(0,0,0,.25)
+  border-radius: 10px
+  color: #000
+  background: transparent
+  transition: .2s
+  box-shadow: 1px 2px 3px 0px rgba(0,0,0,.25)
+  line-height: 1.5
+  width: auto!important
+  margin: 2em auto!important
+
+  &::before
+    content: ''
+    background: url('../img/icon/i_more_gorisontal.svg') no-repeat
+    background-size: 1.25em
+    vertical-align: -0.25em
+    margin: 0 5px 0 0
+    width: 1.25em
+    height: 1.25em
+    display: inline-block
+
+  &:hover, &:focus
+    box-shadow: 1px 2px 6px 3px rgba(0,0,0,.25)
+
+
+.btn_test
+  min-width: 240px
+  padding: 1em 2em
+  outline: none
+  font-size: large
+  cursor: pointer
+  transition: all .2s linear
+  transform: translateY(0)
+  text-align: center
+  color: #fff
+  border-radius: 0.25em
+  background: #b2430b
+  text-decoration: none
+  border: 1px solid transparent
+  &:hover, &:focus
+    transform: translateY(-3px)
+    background: #963200
+    box-shadow: 0 9px 22px rgba(0,0,0,.27)
+
+
+.container
+  margin: 0 auto
+  padding-left: 20px
+  padding-right: 20px
+  max-width: 1200px
+
+.c_700
+  max-width: 700px
+.c_800
+  max-width: 800px
+.c_900
+  max-width: 900px
+.c_920
+  max-width: 920px
+.c_980
+  max-width: 980px
+.c_1000
+  max-width: 1000px
+.c_1200
+  max-width: 1200px
+.c_1400
+  max-width: 1400px
+
+.p40
+  padding: 40px 0
+
+table
+  p:first-child
+    font-size: inherit!important
+    &:first-letter
+      font-size: 100%!important
+      color: inherit!important
+blockquote
+  p:first-child
+    font-size: inherit!important
+    margin-top: 0
+    &:first-letter
+      font-size: 100%!important
+      color: inherit!important
+  p:last-child
+    margin-bottom: 0
+
+
+//.article_title
+  --max-font: 50
+  --min-font: 32
+
+//.article_subtitle
+  --max-font: 28
+  --min-font: 22
+
+//.article_info
+  color: #555
+  font-size: 0.85em
+  margin-bottom: 1em
+  &_author
+    margin-right: 0.5em
+  &_published
+    margin-right: 0.5em
+  &_hits
+    margin-right: 0.5em
+
+//.article_introtext
+  margin: 1em 0
+
+//.article_parent
+  margin: 2em 0 1em 0
+  padding: 0 0 1em 0
+
+
+.bpbottom
+  height: 3.2em
+
+.hdb
+  position: relative
+  height: 650px
+  .c_main
+    max-width: 1200px
+    padding: 0 30px
+  &::after
+    display: block
+    position: absolute
+    width: 100%
+    height: 100%
+    z-index: 1
+    left: 0
+    top: 0
+    content: ""
+    background: rgba(0, 0, 0, .25)
+  &_inner
+    position: relative
+    z-index: 2
+    color: #fff
+    padding: 5em 0 0 5em
+    &_item
+      display: grid
+      grid-row-gap: 1em
+      justify-items: start
+      justify-content: start
+      &_title
+        h1
+          margin: 0 0 0.25em 0
+          color: #fff
+
+      &_number
+        &_value
+          line-height: 1.4
+          letter-spacing: -1px
+          font-family: var(--h-font)
+          font-size: 1.75em
+        &_title
+          margin-top: 20px
+          line-height: 1.4
+          letter-spacing: -1px
+          font-family: var(--h-font)
+          font-size: 1.5em
+      &_list
+        display: flex
+        flex-direction: row
+        justify-content: flex-start
+        flex-wrap: wrap
+        margin: 1em 0
+        &_item
+          display: flex
+          align-items: center
+          justify-items: start
+          margin: 0 1em 1em 0
+          &_image
+            .iconify
+              width: 3.5em
+              height: 3.5em
+          &_text
+            font-size: 1em
+            padding: 0.5em
+      &_groupbtn
+        button
+          background: #f60
+          color: #fff
+          text-decoration: none
+          padding: 0.75em 1em
+          border: 1px solid #f60
+          font-size: 1em
+          border-radius: 5px
+          transition: color .25s, background-color .25s, opacity .25s, border-color .25s
+          text-shadow: none
+          margin: 0.25em
+          &:hover
+            background: #f70
+
+.hh
+  background-position: 50%
+  background-repeat: no-repeat
+  background-size: cover
+  position: relative
+  display: flex
+  align-items: center
+  &_overlay
+    position: absolute
+    background-color: #343a40
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    opacity: .7
+  &_in
+    color: #fff
+    margin: 0 auto
+    text-align: center
+    padding: 40px 0 80px
+    z-index: 1
+    &_bn
+      img
+        opacity: .85
+      &_title
+        --max-font: 36
+        --min-font: 26
+
+.related_pub
+  padding: 2em 0!important
+
+#section3,
+#section4
+  padding: 80px 0
+  .inner
+    .title
+      text-align: center
+      margin: 0 auto 1.5em
+      padding: 0
+    .list
+      &_item
+        background-color: $bg1
+        box-shadow: 1px 3px 6px rgba(0,0,0,0.15)
+        transition: 0.3s
+        border-radius: 10px
+        margin: 0 1em
+        position: relative
+        display: flex
+        flex-direction: column
+        height: 100%
+        &:hover
+          transition: 0.3s
+          background-color: #fff
+
+          .list_item_top_img
+            opacity: 0.85
+
+          .list_item_top_title a
+            text-decoration: none
+            color: #f60
+
+        &_top
+          position: relative
+          &_img
+            border-radius: 10px 10px 0 0
+          &_title
+            --max-font: 24
+            --min-font: 22
+            letter-spacing: -0.3px
+            padding: 0 1em
+            margin: 1em 0
+            a
+              color: #000
+              text-decoration: none
+              &::before
+                content: ""
+                position: absolute
+                top: 0
+                right: 0
+                bottom: 0
+                left: 0
+        &_bottom
+          padding: 0 1em
+          margin: 0 0 1em 0
+          &_info
+            color: #555
+            font-size: initial
+            span.calendar
+              margin-right: 10px
+              &::before
+                content: url('../img/icon/i_calendar.svg')
+                vertical-align: middle
+                width: 1em
+                display: inline-block
+                margin-right: 5px
+            span.eye
+              &::before
+                content: url('../img/icon/i_eye.svg')
+                vertical-align: middle
+                width: 1em
+                display: inline-block
+                margin-right: 5px
+            span
+              margin-right: 10px
+            a
+              color: #666
+              &:hover,&:focus
+                color: red
+                text-decoration: none
+          &_parent
+            margin: 1em 0 0 0
+            a
+              color: #555
+              text-decoration: none
+              font-size: 90%
+              &:hover
+                text-decoration: underline
+            .parent
+              float: right
+            .author
+              float: left
+              a
+                &::before
+                  content: ''
+                  background: url('../img/icon/i_author.svg') no-repeat
+                  background-size: 1em
+                  vertical-align: -0.125em
+                  width: 1em
+                  height: 1em
+                  display: inline-block
+                  margin-right: 5px
+
+.help
+  padding: 60px 0
+  background: #F2F0EA
+  .container
+    margin: 0 auto!important
+    max-width: 1140px!important
+  &_bl
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr))
+    grid-column-gap: 2em
+    grid-row-gap: 1em
+    &_text
+      align-self: center
+      padding: 20px
+      &_in
+        &_title
+          margin-top: 0
+          --max-font: 32
+          --min-font: 24
+        &_subtitle
+          --max-font: 22
+          --min-font: 18
+          line-height: 1.35
+          font-weight: 400
+          margin-bottom: 2em
+        &_link
+          min-width: 240px
+          padding: 21px 15px 21px
+          position: relative
+          overflow: hidden
+          font-weight: 500
+          line-height: 16px
+          display: inline-block
+          cursor: pointer
+          transition: all .2s linear
+          transform: translateY(0)
+          text-align: center
+          color: #fff!important
+          border-radius: 4px
+          background-color: #b2430b
+          box-shadow: 0 7px 20px rgba(0,0,0,.15)
+          outline: 0!important
+          text-decoration: none
+          border-bottom: 1px solid transparent
+          &:hover, &:focus
+            transform: translateY(-5px)
+            text-decoration: none
+            color: #fff
+            border-radius: 4px
+            background: #963200
+            background-color: #963200
+            box-shadow: 0 9px 22px rgba(0,0,0,.27)
+    &_img
+      justify-self: center
+      align-self: center
+      &_image
+        border-radius: 0.25em
+      figcaption
+        display: none
+
+.btn_ripple
+  background-position: center
+  &:hover
+    background: #963200 radial-gradient(circle, transparent 1%, #963200 1%) center/15000%
+  &:active
+    background-color: #c46737
+    background-size: 100%
+    transition: background 0s
+
+
+.masonry
+  columns: 3
+  column-gap: 1.5em
+  padding-bottom: 2em
+  @media (max-width: 992px)
+    columns: 2
+  @media (max-width: 480px)
+    columns: 1
+  .grid
+    display: inline-block
+    margin-bottom: 0.5em
+    margin-top: 1em
+    position: relative
+    border-radius: 6px
+    background: #fff
+    padding: 1em
+    transition: 0.3s
+    box-shadow: 1px 1px 5px 1px rgba(150, 150, 150, 0.66)
+    &:hover
+      box-shadow: 3px 3px 15px 3px rgb(150, 150, 150)
+      transition: 0.3s
+      .grid_top
+        &_link
+          text-decoration: none
+          color: #f60
+        &_image
+          opacity: 0.75
+
+    &_top
+      position: relative
+      &_image
+        width: 100%
+        display: block
+        border-radius: 3px
+
+      &_title
+        --max-font: 30
+        --min-font: 22
+
+      &_link
+        color: black
+        &::before
+          content: ""
+          position: absolute
+          top: 0
+          right: 0
+          bottom: 0
+          left: 0
+
+    &_bottom
+      padding-bottom: 0.5em
+      &_author
+        font-size: 14px
+        color: #555
+        span.calendar
+          &::before
+            content: ''
+            background: url('../img/icon/i_calendar.svg') no-repeat
+            background-size: 1em
+            vertical-align: -0.125em
+            width: 1em
+            height: 1em
+            display: inline-block
+            margin-right: 3px
+        span.eye
+          margin-right: 6px
+          &::before
+            content: ''
+            background: url('../img/icon/i_eye.svg') no-repeat
+            background-size: 1em
+            vertical-align: -0.125em
+            width: 1em
+            height: 1em
+            display: inline-block
+            margin-right: 3px
+        span.author
+          margin-right: 6px
+          &::before
+            content: ''
+            background: url('../img/icon/i_author.svg') no-repeat
+            background-size: 1em
+            vertical-align: -0.125em
+            width: 1em
+            height: 1em
+            display: inline-block
+            margin-right: 3px
+
+
+.gdt
+  padding: 40px 0
+.tb
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  grid-gap: 2em
+
+  &_item
+    overflow: hidden
+    background: #f0f0f0
+    border-radius: 5px
+    padding: 1em
+    &_top
+      position: relative
+      &:hover
+        .tb_item_top_img img
+          filter: brightness(0.85)
+          transition: 0.1s
+        .tb_item_top_title a
+          color: #f60
+          text-decoration: none
+          transition: 0.1s
+      &_img
+        position: relative
+
+        img
+          display: block
+          transition: 0.1s
+        &_day
+          position: absolute
+          top: 0
+          left: 0
+          padding: 10px 15px
+          background: #00000080
+          color: #fff
+          font-size: 90%
+        &_period
+          position: absolute
+          bottom: 0
+          right: 0
+          padding: 10px 15px
+          background: #00000080
+          color: #fff
+          font-size: 90%
+      &_title
+        --max-font: 30
+        --min-font: 22
+        transition: 0.1s
+        a
+          color: black
+          transition: 0.1s
+          touch-action: manipulation
+          &::before
+            content: ""
+            position: absolute
+            top: 0
+            right: 0
+            bottom: 0
+            left: 0
+
+    &_bottom
+      &_route
+        margin: 0 0 1em 0
+        font-size: 80%
+      &_category
+        position: relative
+        display: inline-block
+        font-size: 90%
+        margin: 0 0 1em 0
+        line-height: initial
+
+        a.levelicon
+          &.level1,
+          &.level2,
+          &.level3,
+          &.level4
+            font-size: 0
+            &::before
+              position: absolute
+              bottom: 0
+              content: ''
+              font-size: initial
+              width: 4em
+              height: 1em
+              background-size: 80%!important
+          &.level1::before
+            background: url(../img/svg/level_01.svg) no-repeat
+          &.level2::before
+            background: url(../img/svg/level_02.svg) no-repeat
+          &.level3::before
+            background: url(../img/svg/level_03.svg) no-repeat
+          &.level4::before
+            background: url(../img/svg/level_04.svg) no-repeat
+      &_price
+        display: inline-block
+        float: right
+        margin-right: 0.5em
+        font-size: 110%
+        color: #f60
+      &_parent
+        margin: 0 0 1em 0
+
+
+
+.service
+  padding: 40px 0
+  h1
+    text-align: center
+  .sb
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-gap: 1em
+    &_item
+      border-radius: 10px
+      overflow: hidden
+      a
+        display: grid
+        position: relative
+        overflow: hidden
+        line-height: 0
+        border-radius: .25em
+        &:hover
+          .sb_item_img
+            &::before
+              opacity: .25
+      &_img
+        &::before
+          content: " "
+          position: absolute
+          width: 100%
+          height: 100%
+          background: #000
+          opacity: .35
+          transition: all .3s ease-out
+      &_text
+        display: grid
+        h2
+          position: absolute
+          justify-self: center
+          align-self: center
+          color: #fff
+          text-shadow: 1px 2px 5px rgba(0,0,0,.5)
+          --max-font: 28
+          --min-font: 24
+
+.gallery_section
+  max-width: 1600px
+  margin: 0 auto
+  padding: 40px 0
+  .title
+    &::after, &::before
+      border: dashed #fff
+      border-width: 0 10px
+
+  .gallery
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr))
+    grid-gap: 1em
+    align-items: stretch
+    &_item
+      display: none
+      &:nth-child(-n+6)
+        display: block
+      .arl_ct_img
+        margin: 0
+        img
+          width: 100%
+          border-radius: .125em
+        &_alt
+          display: none
+
+.gallery_section_tour
+  margin: 0 auto
+  padding: 40px 0
+  .title
+    &::after, &::before
+      border: dashed #fff
+      border-width: 0 10px
+
+  .gallery_tour
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-gap: 0
+    &_item
+      display: none
+      a
+        display: block
+        line-height: 0
+        img
+          width: 100%
+      &:nth-child(n+2):nth-child(-n+7)
+        display: block
+      .arl_ct_img
+        margin: 0
+        img
+          width: 100%
+
+.gallery_guide
+  &_item
+    max-width: 100px
+    width: 100%
+    img
+      border-radius: 3px
+      max-width: 100px
+    &:first-child
+      max-width: 100%
+      img
+        max-width: 100%
+        width: 100%
+
+
+
+.gd
+  padding: 40px 0
+  background: #FBF9F5
+  &_title
+    margin-bottom: 60px
+  &_list
+    display: grid
+    grid-template-columns: repeat(5, 1fr)
+    grid-gap: 1em
+    justify-content: space-evenly
+    &_item
+      background: #fff
+      border-radius: 6px
+      padding: 0.5em 0.5em 1em 0.5em
+      box-shadow: 0px 6px 12px rgb(223, 223, 223), 1px 2px 3px 0px rgb(223, 223, 223)
+      text-align: center
+      &:hover
+        box-shadow: 0px 9px 15px #dfdfdf, 3px 6px 9px 0px #dfdfdf
+        .gd_list_item_top_title a
+          text-decoration: none
+          color: #f60
+          transition: 0.1s
+        .gd_list_item_top_image
+          transition: 0.3s
+          opacity: 0.85
+
+      &_top
+        position: relative
+        &_image
+          display: block
+          border-radius: 3px
+          margin-bottom: 1em
+          transition: 0.3s
+        &_title
+          --max-font: 20
+          --min-font: 18
+          margin: 0
+          padding: 0
+          a
+            color: inherit
+            transition: 0.1s
+            &::before
+              content: ""
+              position: absolute
+              top: 0
+              right: 0
+              bottom: 0
+              left: 0
+      &_bottom
+        padding: 0 0.5em 0.5em 0.5em
+        &_age
+          font-size: var(--responsive)
+          --max-font: 15
+          --min-font: 14
+          margin: 3px auto
+        &_lt
+          font-size: var(--responsive)
+          --max-font: 14
+          --min-font: 13
+          margin: 0
+          padding: 0
+
+
+.gdi
+  padding: 40px 0
+  &_ct
+    display: grid
+    grid-column: 12
+    grid-column-gap: 2em
+    grid-row-gap: 1em
+    justify-content: left
+    &_img
+      grid-column: 1/5
+      max-width: 480px
+      min-width: 100%
+      &_image
+        border-radius: 10px
+    &_text
+      grid-column: 5/12
+      min-width: 100%
+      &_title
+        margin: 10px 0 10px 0
+        --max-font: 30
+        --min-font: 24
+      &_subtitle
+        margin-top: 0
+        --max-font: 22
+        --min-font: 18
+      &_content
+        line-height: 1.45
+        font-size: var(--responsive)
+        --max-font: 16
+        --min-font: 14
+        margin: 0 auto
+
+      &_lang
+        .n_lang
+          font-size: 90%
+          font-weight: 400
+      &_social
+        &_bk
+          a
+            display: inline-block
+            margin-right: 5px
+            font-size: 1.25em
+            transition: all .2s ease-in-out
+            text-decoration: none
+            &:hover
+              transform: scale(1.1)
+      &_contact
+        &_bk
+          margin: 1em 0
+          a
+            display: block
+            color: initial
+            margin: 0.25em 0
+            transition: all .2s ease-in-out
+            text-decoration: none
+            &:hover
+              text-decoration: underline
+            .iconify.whatsapp
+              color: #25D366
+            .iconify.skype
+              color: #00AFF0
+            .iconify.email
+              color: #ff5700
+            .iconify.phone
+              color: #410093
+
+
+
+
+
+
+
+
+.guide
+  margin: 1em auto
+  max-width: 1200px
+  &_list
+    display: grid
+    grid-row-gap: 2em
+    &_item
+      display: grid
+      grid-template-columns: 30% 70%
+      grid-gap: 1em
+      background-color: #f8f8f8
+      padding: 20px 15px
+      transition: all .3s ease-out
+      &:hover
+        background-color: #fff
+        box-shadow: 0 1px 30px 0 rgba(0,97,91,.1), 0 1px 4px 0 rgba(0, 0, 0, 0.3)
+      &_img
+        display: grid
+        justify-items: center
+        figcaption
+          display: none
+        .arl_ct_img
+          margin: 0
+          img
+            max-width: 320px
+            width: 100%
+      &_text
+        padding: 0 0.5em
+        h3
+          margin: 0
+
+
+.crumbs
+  padding: 1em 0
+  background: #F2F0EA
+  ul.breadcrumb
+    line-height: 1.2
+    font-weight: 300
+    padding: 0
+    margin: 0
+    li
+      display: inline-block
+      &::after
+        content: url('../img/icon/i_chevron_right.svg')
+        vertical-align: middle
+        margin: 0 0 0 2px
+        line-height: 1
+      &:last-child
+        &::after
+          content: none
+      &.active
+        vertical-align: -0.05em
+      a
+        color: inherit
+        text-decoration: none
+        &:hover
+          text-decoration: underline
+        span.home_title
+          position: absolute
+          width: 1px
+          height: 1px
+          padding: 0
+          overflow: hidden
+          clip: rect(0,0,0,0)
+          white-space: nowrap
+          border: 0
+        &.home_link
+          .iconify
+            font-size: 120%
+            vertical-align: -0.125em
+            line-height: 1.2
+
+.header
+  &_ban
+    &_content
+      position: relative
+      overflow: hidden
+      padding-top: 30%
+      //display: none
+      &::after
+        position: absolute
+        z-index: 0
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
+        background-color: #000
+        opacity: .35
+        content: ''
+      img
+        width: 100%
+        position: absolute
+        left: 50%
+        right: auto
+        text-align: center
+        top: 50%
+        bottom: auto
+        transform: translate(-50%,-50%)
+
+.header_text
+  &_title
+    --max-font: 50
+    --min-font: 32
+  &_info
+    color: #555
+    font-size: 0.85em
+    margin-bottom: 1em
+    .item
+      display: initial
+      margin-right: 0.5em
+
+  &_introtext
+    margin: 1em 0
+  .image
+    figure
+      margin: 1em auto
+      padding: 0
+      img
+        margin: 1em 0
+        border-radius: 5px
+      figcaption
+        margin-top: 0.5em
+        font-size: var(--responsive)
+        --max-font: 15
+        --min-font: 13
+        font-weight: bold
+
+
+
+.report
+  &_year
+    --max-font: 18
+    --min-font: 14
+    sup
+      font-size: small
+
+  &_list
+    margin-bottom: 2em
+    padding-left: 1.5em
+    &_item
+      border-bottom: 1px dashed #bbb
+      margin: 1em 0
+      padding: 0 0 1em 0
+      &:last-child
+        border-bottom: none
+
+      &_stat
+        font-size: small
+        color: #999
+        display: none
+      &_link
+        text-decoration: none
+        &:hover
+          text-decoration: underline
+      &_route
+        margin: 0.5em 0
+      &_read
+        display: block
+
+.hart
+  &_hd
+    position: relative
+    overflow: hidden
+    padding-top: 35%
+    &::after
+      position: absolute
+      z-index: 0
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      background-color: #000
+      opacity: .35
+      content: ''
+    img
+      width: 100%
+      position: absolute
+      left: 50%
+      right: auto
+      text-align: center
+      top: 50%
+      bottom: auto
+      transform: translate(-50%,-50%)
+    &_content
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: perspective(1px) translate(-50%, -50%)
+      color: #ffffff
+      text-shadow: 1px 2px 3px rgba(0, 0, 0, 1)
+      text-align: center
+      max-width: 1200px
+      z-index: 1
+      backdrop-filter: blur(1px)
+      padding: 5%
+      &_crumbs
+        ul
+          display: inline-flex
+          flex-wrap: wrap
+          //padding: .75em 1em .75em .1em
+          list-style: none
+          overflow: hidden
+          margin: 0
+          padding: 0
+          li
+            font-size: 90%
+            font-weight: 400
+            a
+              color: #fff
+              text-decoration: none
+              &::after
+                top: 10px
+                right: 0
+                display: inline-flex
+                width: 5px
+                height: 5px
+                content: ''
+                transform: rotate(-45deg) translate(0, -50%)
+                border: 2px solid rgba(255,255,255,0.7)
+                border-top: 0
+                border-left: 0
+                margin-left: .5em
+                margin-right: .5em
+            &:last-child
+              a
+                &::after
+                  display: none
+      &_footer
+        span
+          padding-right: 10px
+        .iconify
+          filter: drop-shadow(1px 1px 1px #000)
+
+
+
+.article
+  &_inner
+    max-width: 900px
+    .article_header
+      &_title
+        --max-font: 50
+        --min-font: 32
+      &_info
+        color: #555
+        font-size: 0.85em
+        margin-bottom: 1em
+        .item
+          display: initial
+          margin-right: 0.5em
+
+      &_introtext
+        margin: 1em 0
+
+      img
+        border-radius: 5px
+      .image
+        figure
+          margin: 1em auto
+          padding: 0
+          display: inline-block
+          img
+            border-radius: 5px
+          figcaption
+            margin-top: 0.5em
+            font-size: var(--responsive)
+            --max-font: 15
+            --min-font: 13
+            font-weight: bold
+
+    .article_body
+      ul, ol
+        list-style: none
+      ul
+        margin: 1em
+        padding: 0 0 0 1.5em
+        li
+          position: relative
+          margin: 1em 0
+          &:before
+            content: url(../img/icon/i_check.svg)
+            vertical-align: middle
+            display: inline-block
+            position: absolute
+            left: -1.5em
+            line-height: 1.5
+      ol
+        counter-reset: num
+        li
+          counter-increment: num
+          position: relative
+          margin: 1em 0
+          &:before
+            position: absolute
+            display: inline-block
+            left: -1.5em
+            color: initial
+            line-height: initial
+            content: counter(num) "."
+        ol
+          counter-reset: num2
+          &>li
+            counter-increment: num2
+            &:before
+              left: -2em
+              content: counter(num) "." counter(num2)
+          ol
+            counter-reset: num3
+            &>li
+              counter-increment: num3
+              &:before
+                left: -2em
+                content: counter(num) "." counter(num2) "." counter(num3)
+      img
+        border-radius: 5px
+        max-width: 100%
+      p
+        margin: 1.5em 0
+
+      figure
+        margin: 1em auto
+        padding: 0
+        display: inline-block
+        figcaption
+          margin-top: 0.5em
+          font-size: var(--responsive)
+          --max-font: 15
+          --min-font: 13
+          font-weight: bold
+          font-style: italic
+
+
+    .article_author
+      display: grid
+      grid-template-areas: "title" "image" "texte"
+      grid-column-gap: 1em
+      justify-content: center
+      align-content: center
+      align-items: center
+      max-width: 600px
+      padding: 1em
+      margin: 1em 0 2em 0
+      background: #f1f1f1
+      border: 1px solid #f1f1f1
+      box-shadow: 0 7px 20px rgba(0,0,0,0.15)
+      &_image
+        grid-area: image
+        grid-column: 1/2
+        grid-row: 1/3
+        padding: 1em
+        img
+          background: none
+          border: 0
+          padding: 0
+          margin: 0
+          border-radius: 50%
+          width: 100%
+          max-width: 200px
+      &_title
+        grid-area: title
+        grid-column: 2/3
+        grid-row: 1/2
+        h3
+          margin: 0
+          padding: 0
+          --max-font: 18
+          --min-font: 17
+          font-weight: normal
+      &_text
+        grid-area: texte
+        grid-column: 2/3
+        grid-row: 2/3
+        font-size: var(--responsive)
+        --max-font: 15
+        --min-font: 14
+        h4
+          margin: 0
+          padding: 0
+          --max-font: 20
+          --min-font: 19
+
+  .share
+    margin: 2em auto
+    &_social
+      display: inline-block
+      align-items: center
+      float: right
+      &_item
+        height: 28px
+        width: 28px
+        margin-right: 16px
+        display: inline-block
+        a
+          display: block
+    &_pdf
+      display: inline-block
+      align-items: center
+
+      &_item
+        height: 28px
+        width: 28px
+        margin-right: 16px
+        display: inline-block
+
+
+.arl
+  .art_title
+    --max-font: 48
+    --min-font: 32
+  .art_subtitle
+    --max-font: 28
+    --min-font: 22
+    margin-top: -0.6em
+  &_hd
+    position: relative
+    overflow: hidden
+    padding-top: 35%
+    &::after
+      position: absolute
+      z-index: 0
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      background-color: #000
+      opacity: .35
+      content: ''
+    img
+      width: 100%
+      position: absolute
+      left: 50%
+      right: auto
+      text-align: center
+      top: 50%
+      bottom: auto
+      transform: translate(-50%,-50%)
+    &_content
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: perspective(1px) translate(-50%, -50%)
+      color: #ffffff
+      text-shadow: 1px 2px 3px rgba(0, 0, 0, 1)
+      text-align: center
+      max-width: 1200px
+      z-index: 1
+      backdrop-filter: blur(1px)
+      padding: 5%
+      &_crumbs
+        ul
+          display: inline-flex
+          flex-wrap: wrap
+          //padding: .75em 1em .75em .1em
+          list-style: none
+          overflow: hidden
+          margin: 0
+          padding: 0
+          li
+            font-size: 90%
+            font-weight: 400
+            a
+              color: #fff
+              text-decoration: none
+              &::after
+                top: 10px
+                right: 0
+                display: inline-flex
+                width: 5px
+                height: 5px
+                content: ''
+                transform: rotate(-45deg) translate(0, -50%)
+                border: 2px solid rgba(255,255,255,0.7)
+                border-top: 0
+                border-left: 0
+                margin-left: .5em
+                margin-right: .5em
+            &:last-child
+              a
+                &::after
+                  display: none
+      &_footer
+        span
+          padding-right: 10px
+        .iconify
+          filter: drop-shadow(1px 1px 1px #000)
+  &_ct
+    max-width: 900px
+    &_img
+      margin: 1em 0
+      img
+        border-radius: 5px
+      &_alt
+        font-weight: bold
+        font-style: italic
+
+    &_author
+      display: block
+    &_source
+      display: block
+    &_parent
+      display: block
+      margin: 1em auto
+
+    &_share
+      margin: 2em auto
+      &_social
+        display: inline-block
+        align-items: center
+        float: right
+        &_item
+          height: 28px
+          width: 28px
+          margin-right: 16px
+          display: inline-block
+          a
+            display: block
+      &_pdf
+        display: inline-block
+        align-items: center
+
+        &_item
+          height: 28px
+          width: 28px
+          margin-right: 16px
+          display: inline-block
+
+    &_excurs
+      padding-bottom: 1em
+      &_desc
+        margin: 1em 0 2em 0
+      &_pt
+        margin: 1em 0
+        padding: 2%
+        line-height: 2
+        border: 3px dotted #b2430b
+        background-color: #f1f1f1
+        color: #000
+        max-width: 90%
+        box-shadow: 0 7px 20px rgba(0,0,0,0.15)
+        &_item
+      &_rout
+        font-weight: 600
+      &_area
+      &_note
+        margin: 2em 1em
+        padding: 2%
+        border: 3px dotted #b2430b
+        background-color: #f1f1f1
+        color: #000
+        max-width: 90%
+        box-shadow: 0 7px 20px rgba(0,0,0,0.15)
+      &_price
+
+
+
+
+
+
+.related_tour
+  padding: 80px 0
+  background: #f1f1f1
+  .bp
+    margin: 2em auto
+
+.title
+  overflow: hidden
+  text-align: center
+  &:before, &:after
+    content: ''
+    display: inline-block
+    vertical-align: middle
+    box-sizing: border-box
+    width: 25%
+    height: 2px
+    background: #626262
+    border: dashed #f1f1f1
+    border-width: 0 10px
+  &:before
+    margin-left: -100%
+  &:after
+    margin-right: -100%
+
+.title2
+  --max-font: 30
+  --min-font: 20
+  position: relative
+  padding: 0 0 0.65em 0.5em
+  margin: 0 0 1.5em 0
+  &::after
+    content: ""
+    position: absolute
+    height: 5px
+    width: 3em
+    background: #f60
+    left: 0.5em
+    bottom: 0
+    border-radius: 5px
+
+.ft
+  padding: 80px 0
+  background: saddlebrown
+  color: #fff
+  &_t
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr))
+    grid-gap: 1.5em
+    align-items: start
+    padding-bottom: 2em
+    &_item
+      display: grid
+      grid-template-columns: 1fr
+      grid-gap: 1em
+      justify-self: center
+      h3
+        margin: 0
+        color: #fff
+      ul
+        list-style: none
+        margin: 0
+        padding: 0
+        line-height: 2.25em
+        li
+          a
+            text-decoration: none
+            color: #fff
+  &_b
+    border-top: 1px dashed #fff
+    padding-top: 2em
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))
+    grid-gap: 1.5em
+    &_item
+      justify-self: center
+      align-self: center
+      ul
+        list-style: none
+        padding: 0
+        margin: 0
+        li
+          display: inline-block
+          &:not(:last-child)
+            margin-right: .5em
+          a
+            font-size: 0
+            display: block
+            color: #fff
+            svg
+              font-size: 34px
+              top: 0
+
+#book
+  .bk
+    padding: 0 0 60px 0
+    &_content
+      background: #f6f1e5
+      &.container
+        max-width: 900px
+        padding: 2em 3em
+
+
+  .book
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr))
+    grid-row-gap: 1em
+    grid-column-gap: 2em
+    margin: 2em 0
+    font-family: var(--main-font)
+    font-size: var(--responsive)
+    --max-font: 17
+    --min-font: 15
+    &_img
+      img
+        border-radius: 10px
+    &_download
+      .iconify
+        font-size: 1.5em
+    &_desc
+      display: grid
+      grid-row-gap: 0.5em
+      align-content: start
+      h1
+        margin: 0
+        line-height: 1
+        letter-spacing: -0.75px
+      h2
+        margin: 0 0 0.5em 0
+        font-weight: 400
+        --max-font: 24
+        --min-font: 20
+      &_annot
+        margin: 1em 0
+        &_title
+          border-bottom: 1px solid #666
+          width: fit-content
+        &_text
+          margin: 0.5em 0
+      &_hits
+        background: url(../img/icon/i_eye.svg) no-repeat
+        background-position: left
+        background-size: 24px
+        padding: 0 0 0 1.75em
+        margin: 1em 0
+        font-size: 1em
+        color: #777
+
+      span.item_online
+        display: block
+
+      &_online
+        &::before
+          content: ''
+          background: url(../img/icon/i_reader.svg) no-repeat
+          display: inline-block
+          width: 0.9em
+          height: 0.9em
+          margin-right: 0.5em
+
+        #more_button
+          border-style: none
+          background: none
+          font-size: inherit
+          color: #0000ee
+          outline: none
+          padding: 0
+          margin: 1em 0
+          text-align: left
+          cursor: pointer
+          &:hover
+            text-decoration: underline
+
+
+    &_full
+      max-width: 800px
+      margin: 0px auto
+      .textbook
+        padding-top: 80px
+        h2
+          border-top: 2px dashed #999
+          padding-top: 20px
+          outline: none
+  #grow
+    transition: height .3s
+    height: 0
+    overflow: hidden
+
+
+
+button#back_to_top
+  position: fixed
+  right: 1em
+  bottom: 1em
+  border: none
+  background: #f60 url(../img/icon/i_top_b.svg) no-repeat center
+  background-size: 2em
+  border-radius: 50%
+  padding: 1.5em
+  z-index: 5
+  display: block
+  transition: .2s
+  &:hover
+    background-position-y: -0.05em
+    transition: .2s
+
+
+.tour
+  &_inner
+    margin: 0 auto
+    .mrc-content-wrap
+      padding-left: 5px
+  &_title
+    --max-font: 48
+    --min-font: 32
+  &_subtitle
+    --max-font: 28
+    --min-font: 22
+    margin-top: -0.6em
+  &_har
+    display: grid
+    grid-row-gap: 0.25em
+    span
+      font-weight: 500
+    a
+      color: #de4835
+      text-decoration: none
+      &:hover
+        text-decoration: underline
+  &_days
+    display: grid
+    grid-row-gap: 1em
+    position: relative
+    margin: 2em 0
+    &_line
+      background: #de4835
+      background: linear-gradient(to bottom,#de4835 0,#018c3e 100%)
+      width: 1px
+      position: absolute
+      top: 0
+      bottom: 0
+    &_endline
+      background: #de4835
+      border-radius: 50em
+      width: 11px
+      height: 11px
+      position: absolute
+      left: -5px
+      bottom: -5.5px
+    &_item
+      position: relative
+      top: -24px
+      &::before
+        content: "►"
+        color: transparent
+        font-size: 0px
+        position: relative
+        top: 15px
+        border-width: 10px
+        border-style: solid
+        border-color: transparent transparent transparent #de4835
+        border-image: initial
+        border-left: 10px solid #de4835
+
+      &_title
+        margin: 0 0 0 30px
+        font-weight: 500
+        h4
+          margin: 0
+          --max-font: 18
+          --min-font: 15
+          font-weight: 600
+          color: #212347
+          span
+            padding: 0 15px 0 0
+            display: inline-block
+            color: #de4835
+
+      &_desc
+        margin: 15px 0 0 30px
+
+  &_route
+    font-weight: 400
+  &_incl
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr))
+    grid-column-gap: 0.5em
+    grid-row-gap: 0.5em
+    &_includ
+      &_title
+        margin-top: 10px
+
+  .kml
+    display: grid
+    grid-row-gap: 1em
+    padding: 40px 0
+    h4
+      margin: 0.5em 0
+    &_download
+      &::before
+        content: ''
+        background: url(../img/icon/kml_1.svg) no-repeat
+        background-size: 3em
+        display: inline-block
+        width: 3em
+        height: 3em
+        margin: 0 0.5em 0 0
+        vertical-align: middle
+      a
+        display: inline-block
+        border: 1px solid #e5e5e5
+        padding: 5px 15px 8px 10px
+        vertical-align: middle
+        text-decoration: none
+        color: inherit
+        line-height: 1
+        &:hover
+          border: 1px solid #626262
+        &::before
+          content: ''
+          background: url(../img/icon/download.svg) no-repeat
+          background-size: 1.5em
+          display: inline-block
+          width: 1.5em
+          height: 1.5em
+          margin: 0 5px 0 0
+          vertical-align: -0.125em
+    &_info
+      font-size: smaller
+      font-style: italic
+      &::before
+        content: ''
+        background: url(../img/icon/information.svg) no-repeat
+        background-size: 1.5em
+        display: inline-block
+        margin: 0 3px 0 0
+        vertical-align: -0.35em
+        width: 1.5em
+        height: 1.5em
+      a
+        color: inherit
+        vertical-align: middle
+        line-height: 1.5
+
+
+// CSS Button
+.button1
+  display: block
+  transition: all .2s linear
+  text-decoration: none
+  border-radius: 0.25em
+  background: red
+  color: #fff
+  width: max-content
+  margin: 1.5em 0 1em
+  padding: 0.5em 1em
+  &:hover
+    transform: translateY(-5px)
+    background: darken(red, 5%)
+    text-decoration: none
+    box-shadow: 0 0 10px rgba(0,0,0,0.6)
+  &:active,
+  &:focus
+    background: darken(red, 10%)
+
+.mrc
+  button.mrc-btn
+    color: #555
+    padding: 0.5em 0.5em 0.5em 2.5em
+    outline: none
+    border-radius: 5px
+    border-color: #555
+    border: 1px solid #bbb
+    background: transparent
+    font-size: 0.85em
+    transition: 0.1s
+    background-size: 20px!important
+    background-position-x: 0.5em!important
+    background: url('../img/icon/i_more_vertical.svg') no-repeat center left
+    &:hover
+      border: 1px solid #555
+  &.open
+    button.mrc-btn
+      background: url('../img/icon/i_more_gorisontal.svg') no-repeat center left
+
+  &-shadow
+  	pointer-events: none
+  	position: absolute
+  	height: 100px
+  	left: 0; right: 0; bottom: 0
+  	background: linear-gradient(to top, #fbf9f5 14%, rgba(0, 0, 0, 0) 100%)
+
+
+// TipTIp
+
+.info_icon
+  display: inline-block
+  width: 1em
+  color: #666
+  &:hover
+    color: #000
+    cursor: pointer
+
+#tiptip_holder
+  display: none
+  position: absolute
+  top: 0
+  left: 0
+  z-index: 99999
+
+  &.tip_top
+    padding-bottom: 5px
+
+  &.tip_bottom
+    padding-top: 5px
+
+  &.tip_right
+    padding-left: 5px
+
+  &.tip_left
+    padding-right: 5px
+
+#tiptip_content
+  color: #fff
+  padding: 10px
+  border: 1px solid #323232
+  border-radius: 3px
+  font-size: medium
+
+#tiptip_arrow, #tiptip_arrow_inner
+  position: absolute
+  border-color: transparent
+  border-style: solid
+  border-width: 6px
+  height: 0
+  width: 0
+
+#tiptip_holder
+  &.tip_top #tiptip_arrow
+    border-top-color: #fff
+    border-top-color: #323232
+
+  &.tip_bottom #tiptip_arrow
+    border-bottom-color: #fff
+    border-bottom-color: #323232
+
+  &.tip_right #tiptip_arrow
+    border-right-color: #fff
+    border-right-color: #323232
+
+  &.tip_left #tiptip_arrow
+    border-left-color: #fff
+    border-left-color: #323232
+
+  &.tip_top #tiptip_arrow_inner
+    margin-top: -7px
+    margin-left: -6px
+    border-top-color: #323232
+
+  &.tip_bottom #tiptip_arrow_inner
+    margin-top: -5px
+    margin-left: -6px
+    border-bottom-color: #323232
+
+  &.tip_right #tiptip_arrow_inner
+    margin-top: -6px
+    margin-left: -5px
+    border-right-color: #323232
+
+  &.tip_left #tiptip_arrow_inner
+    margin-top: -6px
+    margin-left: -7px
+    border-left-color: #323232
+
+@media screen and (-webkit-min-device-pixel-ratio: 0)
+  #tiptip_content
+    padding: 10px
+    background-color: #323232
+
+  #tiptip_holder
+    &.tip_bottom #tiptip_arrow_inner
+      border-bottom-color: #323232
+
+    &.tip_top #tiptip_arrow_inner
+      border-top-color: #323232
+
+ol.toc
+  li
+    margin: 5px 0
+    ol
+      padding-left: 1.5rem
+      list-style: disc
+      li
+        &::before
+          content: none!important
+
+
+#ogl
+  margin: 0
+  max-width: 640px
+  ul
+    li
+      font-weight: 600
+      a
+        color: rgb(0, 107, 191)
+
+  ul>li>ul>li>ul
+    display: none
+  ul>li::before
+    display: none
+  ul>li>ul>li
+    font-weight: normal
+    margin: 0.3em 0
+
+  .ogl_title
+    font-size: inherit
+    font-weight: bold
+    color: #006bbf
+    border: 1px solid transparent
+    border-radius: 5px
+    background: #f2f0ea
+    padding: 1em
+    margin: 1em 0
+    max-width: 280px
+    width: 100%
+    &:hover
+      background: #e9ebec
+    &::before
+      content: ''
+      background: url('../img/icon/i_list_bulleted.svg') no-repeat
+      background-size: 1.5em
+      width: 1.5em
+      height: 1.5em
+      vertical-align: -0.38em
+      margin: 0 10px
+      display: inline-block
+
+  .ft_contents
+    padding: 0
+  .ft_icon
+    margin: 0 15px
+  .ft_tab_icon .ft_icon>svg g
+    stroke: #006bbf
+  .ft_tab_icon:hover .ft_icon>svg g
+    stroke: #af3e39
+
+.section_contact
+  display: grid
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))
+  grid-gap: 1em
+  margin: 2em auto
+  .contact
+    &_item
+      margin-bottom: 0.5em
+      &.zag
+        font-size: 1.5em
+  .logo
+    align-self: center
+
+.author_popup
+  padding: 2em 0 0 0
+  &_image
+    border-radius: 5px
+
+.blank
+  padding-bottom: 40px
+
+@import megamenu
+@import search
+@import magnific
+@import rtable
+@import owlcarousel2
+@import flextabs
+@import youtubevideo
+@import media

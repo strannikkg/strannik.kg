@@ -1,0 +1,245 @@
+.menu_container
+  width: 100%
+  margin: 0 auto
+  background: #006bbf
+  z-index: 2
+
+  a.menu-mobile
+    text-decoration: none
+    color: #fff
+    height: 50px
+    padding: 0
+
+  .menu-mobile
+    display: none
+    padding: 1em 0
+
+    &::after
+      content: ''
+      background: url(../img/icon/i_menu.svg) no-repeat
+      background-size: 30px
+      width: 30px
+      height: 30px
+      padding: 0
+      float: left
+      position: relative
+      transform: translateY(30%)
+
+  .menu-dropdown-icon
+    &::after
+      content: ''
+      background: url(../img/icon/i_plus.svg) no-repeat
+      background-size: 1.5em
+      display: none
+      cursor: pointer
+      right: 1em
+      top: 1em
+      width: 1.5em
+      height: 1.5em
+      color: #fff
+      position: absolute
+      &:hover
+        content: ''
+        background: url(../img/icon/i_minus.svg) no-repeat
+        background-size: 1em
+
+  .menu > ul
+    margin: 0 auto
+    width: 100%
+    list-style: none
+    padding: 0
+    position: relative
+
+    /* IF .menu position=relative -> ul = container width, ELSE ul = 100% width
+    box-sizing: border-box
+
+    &::before
+      content: ""
+      display: table
+
+    &::after
+      content: ""
+      display: table
+      clear: both
+
+    > li
+      float: left
+      background: #006bbf
+      padding: 0
+      margin: 0
+
+      &:hover
+        background: #f60
+
+      a
+        text-decoration: none
+        padding: 1em 2em
+        display: block
+        color: #fff
+        text-decoration: none
+
+      > ul
+        display: none
+        width: 100%
+        background: #2b74ad
+        border-bottom-right-radius: 5px
+        border-bottom-left-radius: 5px
+        padding: 1em
+        position: absolute
+        z-index: 9
+        left: 0
+        margin: 0
+        list-style: none
+        box-sizing: border-box
+
+        &::before
+          content: ""
+          display: table
+
+        &::after
+          content: ""
+          display: table
+          clear: both
+
+        > li
+          margin-right: 2.5%
+          padding: 0
+          list-style: none
+          width: 20%
+          background: none
+          float: left
+
+          a
+            color: #fff
+            padding: 1em
+            width: 100%
+            display: block
+            border-bottom: 1px solid #ccc
+
+
+          > ul
+            display: block
+            padding: 0
+            margin: 10px 0 0
+            list-style: none
+            box-sizing: border-box
+
+            &:before
+              content: ""
+              display: table
+
+            &:after
+              content: ""
+              display: table
+              clear: both
+
+            > li
+              float: left
+              width: 100%
+              padding: 0
+              margin: 0
+              font-size: .9em
+              &:hover
+                background: #f60
+                border-radius: 5px
+
+              a
+                border: 0
+
+
+
+        &.normal-sub
+          max-width: 260px
+          left: auto
+          padding: 0
+          border-bottom-right-radius: 5px
+          border-bottom-left-radius: 5px
+
+          > li
+            width: 100%
+            border-bottom: 1px solid #fff
+            &:hover
+              background: #f60
+            &:last-child
+              border-bottom-right-radius: 5px
+              border-bottom-left-radius: 5px
+              border-bottom: none
+
+            a
+              border: 0
+              padding: 0.75em 1em
+
+@media only screen and (max-width: 1300px)
+  .menu_container .menu>ul>li a
+    padding: 1em 1.5em
+
+@media only screen and (max-width: 1200px)
+  .menu_container .menu>ul>li a
+    padding: 1em
+
+@media only screen and (max-width: 1024px)
+  .menu_container .menu>ul>li a
+    font-size: 95%
+
+@media only screen and (max-width: 959px)
+  .btn_search
+    right: 5em!important
+  .menu_container
+    width: 100%
+    height: auto
+    .container
+      //padding-right: 0
+      //padding-left: 0
+
+    .menu-mobile
+      display: block
+
+    .menu-dropdown-icon
+      &::after
+        display: block
+        top: 0.75em
+        width: 1.5em
+        height: 1.5em
+
+    .menu
+      > ul
+        display: none
+        > li
+          width: 100%
+          display: block
+          position: relative
+          border-bottom: 1px dashed #fff
+          &:last-child
+            border-bottom: none
+          a
+            padding: 1em
+
+          > ul
+            position: relative
+            padding: 0 0 0 2em
+
+            &.normal-sub
+              width: 100%
+              max-width: none
+            > li
+              float: none
+              width: 100%
+              background: #2b74ad
+              &:first-child
+                margin: 0
+              a
+                border-bottom: 1px dashed #ccc
+                border-top: 1px dashed #ccc
+                width: 80%
+                &:first-child
+                  border-top: none
+
+              > ul
+                position: relative
+                margin: 0
+                background: #2b74ad
+                > li
+                  padding: 0 0 0 2em
+
+      .show-on-mobile
+        display: block

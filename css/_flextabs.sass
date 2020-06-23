@@ -1,0 +1,205 @@
+.a3
+  padding: 40px 15px 0px
+  .ft_container.ft_theme_default
+    &.ft_tabs
+      .ft_contents
+        padding: 15px
+        max-width: 900px
+        margin: 0 auto
+        .ft_content_item
+          grid-template-columns: 100%
+          grid-gap: 0
+          &_text
+            max-width: 800px
+      .ft_nav
+        padding: 20px 0
+
+.ft_container.ft_theme_default
+  max-width: 1160px
+  margin: 0 auto
+  &.ft_tabs
+    .ft_nav
+      padding: 30px 0
+      display: table
+      width: 100%
+      .ft_tab
+        display: table-cell
+        cursor: pointer
+        padding: 0
+        top: 1px
+        position: relative
+        z-index: 10
+        color: #416c76
+        font-family: var(--h-font)
+        font-size: var(--responsive)
+        --max-font: 24
+        --min-font: 22
+        font-weight: 500
+        border-bottom: 3px solid #8eb5c7
+        text-align: center
+        text-decoration: none
+        &>div
+          padding: 0 10px 18px 10px
+        h3
+          margin: 0
+          padding: 0
+          line-height: 0
+          font-size: 24px
+          font-weight: 500
+          a
+            color: #416c76
+            text-decoration: none
+
+        &.active
+          color: #de4835
+          text-decoration: none
+          border-bottom-color: #212347
+          h3
+            a
+              color: #de4835
+        &:hover
+          text-decoration: none
+    .ft_contents
+      padding: 15px 15px 45px 15px
+      position: relative
+      .ft_content
+        &_item
+          display: grid
+          grid-template-columns: 30% 70%
+          grid-gap: 2em
+          overflow: hidden
+          &_img
+            img
+              border-radius: 0.125rem
+          &_text
+            max-width: 600px
+            p
+              margin-top: 0
+      .ft_tab
+        display: none
+
+  // Режим: Accordion
+  &.ft_accordion
+    max-width: 640px
+    margin: 0 auto
+    .ft_nav
+      display: none
+    .ft_contents
+      padding: 10px 15px
+      .ft_tab
+        display: block
+        position: relative
+        cursor: pointer
+        padding: 35px 0
+        border-top: 1px solid #212347
+        overflow: hidden
+        &>div
+          line-height: 0
+          font-size: 20px
+          font-weight: 400
+          color: #416c76
+        h3
+          margin: 0
+          padding: 0
+          line-height: 0
+          font-size: 20px
+          font-weight: 400
+          a
+            color: #416c76
+            text-decoration: none
+        &.active, &:hover
+          text-decoration: none
+      .ft_content
+        &_item
+          display: grid
+          grid-template-columns: 1fr
+          grid-gap: 1em
+          overflow: hidden
+          padding: 0 0 20px 0
+          &_img
+            img
+              width: 100%
+              margin: 10px 0 0 0
+      .ft_tab_icon
+        &:hover .ft_icon
+          background-color: #eee
+          border-radius: 100%
+          >svg
+            g
+              stroke: #222
+        .ft_icon
+          width: 24px
+          height: 24px
+          padding: 10px
+          position: absolute
+          top: 15%
+          right: 0
+          transform: rotate(0)
+          transition: all ease-in-out .3s
+          >svg
+            g
+              stroke: #b70a0a
+          &:hover, &:focus
+            background-color: #eee
+            border-radius: 100%
+            >svg
+              g
+                stroke: #222
+        &.active .ft_icon
+          transform: rotate(-45deg)
+          transition: all ease-in-out .3s
+          &:focus
+            background-color: #eee
+            border-radius: 100%
+            >svg
+              g
+                stroke: #222
+
+
+.ft_container.ft_theme_faq
+  &.ft_accordion
+    .ft_nav
+      display: none
+    .ft_contents
+      padding: 0.5em 0.25em
+      .ft_tab
+        display: block
+        position: relative
+        cursor: pointer
+        padding: 1em
+        margin: 0.25em 0
+        overflow: hidden
+        border: 1px solid transparent
+        border-radius: 10px
+        background-color: #e4e4e4
+        h2
+          margin: 0
+          padding: 0 2em 0 0
+          --max-font: 20
+          --min-font: 18
+        &.active, &:hover
+          text-decoration: none
+      .ft_content
+        padding: 0 0.5em
+      .ft_tab_icon
+        transition: .2s
+        &:hover
+          background-color: #eeeeee
+          transition: .2s
+        .ft_icon
+          width: 2em
+          height: 2em
+          position: absolute
+          top: 50%
+          right: 1em
+          transform: translateY(-50%)
+          transition: all .2s
+          >svg
+            fill: #222
+        &.active .ft_icon
+          transform: translateY(-50%) rotate(180deg)
+          &:focus
+            background-color: #eee
+            border-radius: 100%
+            >svg
+              fill: #222
