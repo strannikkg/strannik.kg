@@ -1,0 +1,202 @@
+@media screen and (max-width: 1200px)
+  .gd_list
+    grid-template-columns: repeat(4, 1fr)
+  .hdb
+    height: 650px
+  .ft-container
+    max-width: 960px
+
+@media screen and (max-width: 1024px)
+  .hdb
+    height: 600px
+  .arl
+    &_hd
+      padding-top: 45%
+      &_content
+        top: 45%
+        left: 45%
+        transform: perspective(1px) translate(-40%, -40%)
+    &_ct
+      &_excurs
+        &_photo
+          .gallery
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr))
+
+@media screen and (max-width: 920px)
+  .gd_list
+    grid-template-columns: repeat(3, 1fr)
+
+@media screen and (max-width: 768px)
+
+  #section3 .inner .list_item,
+  #section4 .inner .list_item
+    margin: 0 0.5em
+  .hdb
+    height: 580px
+    &_inner
+      padding: 3em 0 0 3em
+  .service .sb, .tb
+    grid-template-columns: repeat(2, 1fr)
+
+  .arl
+    &_hd
+      padding-top: 55%
+      &_content
+        top: 40%
+        left: 40%
+        transform: perspective(1px) translate(-35%, -35%)
+    &_ct
+      &_excurs
+        &_photo
+          .gallery
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))
+
+  #navbar
+    .topnav_r_area_menulist
+      top: 10%
+      left: 10%
+
+@media screen and (max-width: 580px)
+  .ft-accordion
+    .ft-contents
+      padding: 10px
+      .ft-tab
+        padding: 25px 0
+      .ft-tab-icon
+        .ft-icon
+          top: 5%
+  .gallery_section_tour
+    .gallery_tour
+      grid-template-columns: repeat(2, 1fr)
+
+  .gdi
+    &_ct
+      grid-column: 1
+      &_img
+        grid-column: 1
+      &_text
+        grid-column: 1
+  .header
+    .header_ban
+      &_content
+        padding-top: 50%
+        &_text
+          width: 90%
+
+  .service .sb, .tb
+    grid-template-columns: 1fr
+  .arl
+    &_hd
+      &_content
+        top: 25%
+        left: 25%
+        transform: perspective(1px) translate(-20%, -20%)
+  .guide
+    &_list
+      &_item
+        grid-template-columns: 1fr
+        justify-items: center
+        &_text
+          display: grid
+          justify-items: center
+          text-align: center
+
+  .bp
+    .bpf
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))
+
+
+    .closebtn
+      right: 30px
+      font-size: 2.5rem
+
+  .ns
+    &_list
+      &_bl
+        display: grid
+        grid-template-columns: 1fr
+        grid-gap: 2em
+        &_item
+          box-shadow: 0 2px 4px rgba(0,0,0,0.2), 0 2px 4px rgba(0,0,0,0.2)
+          &_text
+            padding: 10px 10px 20px 10px
+          &_img
+            img
+              border-radius: .15rem .15rem 0 0
+          &:first-child
+            grid-column: unset
+            grid-row: unset
+            grid-template-columns: 1fr
+          &:nth-child(2)
+            grid-column: unset
+            grid-row: unset
+          &:nth-child(3)
+            grid-column: unset
+            grid-row: unset
+          &:nth-child(4)
+            grid-column: unset
+            grid-row: unset
+
+  .help
+    &_bl
+      grid-template-columns: 1fr
+      &_text
+        grid-row: 2
+        text-align: center
+      &_img
+        grid-row: 1
+
+  .gallery_section
+    .gallery
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr))
+
+  .title
+    &:before, &:after
+      content: none
+
+@media screen and (max-width: 620px)
+  .gd_list
+    grid-template-columns: repeat(2, 1fr)
+
+@media screen and (max-width: 480px)
+  #book .bk_content.container
+    padding: 2em
+
+  #section3 .inner .list_item,
+  #section4 .inner .list_item
+    margin: 0
+
+  .crumbs
+    padding: 1em 0
+  .ft_container.ft_accordion .ft_contents .ft_tab
+    padding: 30px 0
+  .hdb
+    &_inner
+      padding: 3em 0 0 2em
+  .author_block
+    justify-items: center
+    &_image
+      grid-column: 1
+      grid-row: 2/3
+    &_title
+      grid-column: 1
+      grid-row: 1/2
+    &_text
+      grid-column: 1
+      grid-row: 3/4
+      text-align: center
+
+  .arl
+    &_hd
+      &_content
+        top: 10%
+        left: 10%
+        transform: perspective(1px) translate(-5%, -5%)
+  .header
+    .header_ban
+      &_content
+        padding-top: 57%
+
+@media screen and (max-width: 420px)
+  .gd_list
+    grid-template-columns: repeat(1, 1fr)
